@@ -240,7 +240,7 @@ xcodebuild test -project GymLog.xcodeproj -scheme GymLog -destination 'platform=
 ## 👤 Author
 
 **Ali Nasser (Ali Al-Khazali)**
-- 🌐 Portfolio: [a360n.github.io](https://a360n.github.io)
+- 🌐 Portfolio: [www.ali-nasser.dev](https://www.ali-nasser.dev)
 - 🐙 GitHub: [@a360n](https://github.com/a360n)
 - 💼 LinkedIn: [Ali Nasser](https://linkedin.com/in/alinasser)
 
