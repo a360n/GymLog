@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏋️ GymLog — Modern iOS Workout & Program Tracker
+# GymLog — Modern iOS Workout & Program Tracker
 
 [![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://developer.apple.com/swift/)
 [![iOS](https://img.shields.io/badge/iOS-17.0+-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [System Architecture & Data Modeling](#-system-architecture--data-modeling)
@@ -31,43 +31,43 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 **GymLog** is an iOS application designed for athletes and lifters who demand precision, frictionless set logging, and dynamic workout program management. Built from the ground up utilizing Apple's modern Swift frameworks (iOS 17+), GymLog eliminates cloud lock-in and ad clutter by storing all workout histories locally with zero telemetry using **SwiftData**.
 
 ### Why GymLog?
-- ⚡ **Zero-Latency In-Gym Logging:** Optimized stepper controls, quick rest timers, and instant weight/rep adjustments.
-- 🔁 **Cyclic Program Progression:** Automatically rotates through Push/Pull/Legs, Upper/Lower, or custom split schedules based on completed sessions.
-- 📲 **Lock Screen & Widget Extensions:** Glanceable daily workout summaries and interactive controls directly from iOS Lock Screen and Home Screen.
+-  **Zero-Latency In-Gym Logging:** Optimized stepper controls, quick rest timers, and instant weight/rep adjustments.
+-  **Cyclic Program Progression:** Automatically rotates through Push/Pull/Legs, Upper/Lower, or custom split schedules based on completed sessions.
+-  **Lock Screen & Widget Extensions:** Glanceable daily workout summaries and interactive controls directly from iOS Lock Screen and Home Screen.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 1. 📋 Dynamic Program Engine
+### 1.  Dynamic Program Engine
 - Create and manage multi-month training routines (`Program`, `ProgramDay`, `ProgramExercise`).
 - Cyclic split calculation: dynamically computes the active day based on session completions (`completedCount % daysCount`).
 - Supports exercise targets (sets, rep ranges, target RPE, and muscle group tagging).
 
-### 2. ⚡ Live Workout Execution
+### 2.  Live Workout Execution
 - **Today's Workout Mode:** Automatically pulls up today's prescribed routine.
 - Interactive set completion toggles with visual completion feedback.
 - Real-time volume calculation and weight/unit conversions (KG / LBS).
 - Quick exercise substitutions and ad-hoc set additions.
 
-### 3. 📊 Analytics & Progressive Overload
+### 3.  Analytics & Progressive Overload
 - Historical progression tracking across individual exercises.
 - Total workout volume metrics and muscle distribution breakdown.
 - Mini-analytics previews and session recap summaries.
 
-### 4. 🔲 WidgetKit & App Group Sync
+### 4.  WidgetKit & App Group Sync
 - Native Home Screen and Lock Screen widgets.
 - Shared container architecture using App Groups (`SharedTypes`) ensuring instant synchronization between the host app and widget extensions.
 - Interactive App Intents for rapid logging from outside the main app.
 
 ---
 
-## 🏛️ System Architecture & Data Modeling
+## System Architecture & Data Modeling
 
 GymLog utilizes Apple's declarative **SwiftData** framework for ultra-fast, type-safe persistence with relational schema integrity.
 
@@ -125,7 +125,7 @@ erDiagram
 
 ---
 
-## 📲 WidgetKit & Live Activities
+## WidgetKit & Live Activities
 
 GymLog integrates deeply with iOS system surfaces:
 - **`GymLogWidget`**: Displays the active split day and next upcoming exercises.
@@ -134,7 +134,7 @@ GymLog integrates deeply with iOS system surfaces:
 
 ---
 
-## 🎨 Design System & UI/UX
+## Design System & UI/UX
 
 GymLog features a custom high-contrast design palette engineered for gym environments with low glare and high legibility:
 
@@ -148,7 +148,7 @@ GymLog features a custom high-contrast design palette engineered for gym environ
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language:** Swift 5.9+
 - **Frameworks:** SwiftUI, SwiftData, WidgetKit, ActivityKit, AppIntents
@@ -158,44 +158,44 @@ GymLog features a custom high-contrast design palette engineered for gym environ
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 GymLog/
-├── GymLog/                          # Main Application Target
-│   ├── GymLogApp.swift              # App Entry Point & Schema Setup
-│   ├── Models.swift                 # SwiftData Relational Models
-│   ├── ProgramEngine.swift          # Progression & Split Computation Engine
-│   ├── WorkoutService.swift         # Core Session Management
-│   ├── Theme.swift                  # Color Palette & Design Tokens
-│   ├── Utilities.swift              # Formatters & Helpers
-│   ├── Units.swift                  # Metric/Imperial Conversion
-│   ├── SeedData.swift               # Default Sample Splits & Workouts
-│   └── Views/
-│       ├── ContentView.swift        # Root Navigation & TabBar
-│       ├── TodayWorkoutView.swift   # Active Session Interface
-│       ├── ProgramsView.swift       # Program Management List
-│       ├── ProgramDetailView.swift  # Program Editor & Split Inspector
-│       ├── DayDetailView.swift      # Split Day Detail
-│       ├── ExerciseDetailView.swift # Exercise Configuration
-│       ├── ExerciseStepperSheet.swift # Quick Value Adjuster
-│       └── AnalyticsView.swift      # Progression Charts & Stats
-├── GymLogWidget/                    # Widget Extension Target
-│   ├── GymLogWidget.swift           # Home & Lock Screen Widgets
-│   ├── GymLogWidgetLiveActivity.swift # Dynamic Island & Live Activity
-│   ├── GymLogWidgetControl.swift    # iOS 18 Control Center Widgets
-│   └── AppIntent.swift              # Widget Interactive Intents
-├── Group/                           # App Group Shared Code
-│   └── SharedTypes.swift            # Cross-Target Data Contracts
-├── GymLogTests/                     # Unit Tests
-│   ├── GymLogTests.swift
-│   └── ProgramEngineTests.swift     # Engine Validation Tests
-└── GymLogUITests/                   # UI End-to-End Automation Tests
+ GymLog/                          # Main Application Target
+    GymLogApp.swift              # App Entry Point & Schema Setup
+    Models.swift                 # SwiftData Relational Models
+    ProgramEngine.swift          # Progression & Split Computation Engine
+    WorkoutService.swift         # Core Session Management
+    Theme.swift                  # Color Palette & Design Tokens
+    Utilities.swift              # Formatters & Helpers
+    Units.swift                  # Metric/Imperial Conversion
+    SeedData.swift               # Default Sample Splits & Workouts
+    Views/
+        ContentView.swift        # Root Navigation & TabBar
+        TodayWorkoutView.swift   # Active Session Interface
+        ProgramsView.swift       # Program Management List
+        ProgramDetailView.swift  # Program Editor & Split Inspector
+        DayDetailView.swift      # Split Day Detail
+        ExerciseDetailView.swift # Exercise Configuration
+        ExerciseStepperSheet.swift # Quick Value Adjuster
+        AnalyticsView.swift      # Progression Charts & Stats
+ GymLogWidget/                    # Widget Extension Target
+    GymLogWidget.swift           # Home & Lock Screen Widgets
+    GymLogWidgetLiveActivity.swift # Dynamic Island & Live Activity
+    GymLogWidgetControl.swift    # iOS 18 Control Center Widgets
+    AppIntent.swift              # Widget Interactive Intents
+ Group/                           # App Group Shared Code
+    SharedTypes.swift            # Cross-Target Data Contracts
+ GymLogTests/                     # Unit Tests
+    GymLogTests.swift
+    ProgramEngineTests.swift     # Engine Validation Tests
+ GymLogUITests/                   # UI End-to-End Automation Tests
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - macOS Sonoma (14.0+) or macOS Sequoia (15.0+)
@@ -226,7 +226,7 @@ GymLog/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 GymLog includes full test coverage for the deterministic program progression engine and UI flows:
 
@@ -237,15 +237,15 @@ xcodebuild test -project GymLog.xcodeproj -scheme GymLog -destination 'platform=
 
 ---
 
-## 👤 Author
+## Author
 
 **Ali Nasser (Ali Al-Khazali)**
-- 🌐 Portfolio: [www.ali-nasser.dev](https://www.ali-nasser.dev)
-- 🐙 GitHub: [@a360n](https://github.com/a360n)
-- 💼 LinkedIn: [Ali Nasser](https://linkedin.com/in/alinasser)
+-  Portfolio: [www.ali-nasser.dev](https://www.ali-nasser.dev)
+-  GitHub: [@a360n](https://github.com/a360n)
+-  LinkedIn: [Ali Nasser](https://linkedin.com/in/alinasser)
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
