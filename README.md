@@ -18,16 +18,16 @@
 ---
 
 ## Table of Contents
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture & Data Modeling](#-system-architecture--data-modeling)
-- [WidgetKit & Live Activities](#-widgetkit--live-activities)
-- [Design System & UI/UX](#-design-system--uiux)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Testing](#-testing)
-- [Author & License](#-author--license)
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [System Architecture & Data Modeling](#system-architecture--data-modeling)
+- [WidgetKit & Live Activities](#widgetkit--live-activities)
+- [Design System & UI/UX](#design-system--uiux)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Testing](#testing)
+- [Author & License](#author--license)
 
 ---
 
